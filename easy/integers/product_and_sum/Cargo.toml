@@ -1,5 +1,5 @@
 [package]
-name = "integers"
+name = "product_and_sum"
 version = "0.1.0"
 authors = ["Vlad <accierro@gmail.com>"]
 edition = "2018"
