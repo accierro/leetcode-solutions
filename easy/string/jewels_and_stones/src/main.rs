@@ -27,7 +27,6 @@ impl Solution {
         for ch in j.chars() {
             hashtable.insert(ch, 0);
         }
-
         let mut result = 0;
         for ch in s.chars() {
             match hashtable.entry(ch) {
