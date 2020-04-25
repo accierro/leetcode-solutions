@@ -28,10 +28,8 @@ impl Solution {
             map.insert(*num, 0);
         }
 
-        println!("{:?}", map);
         for num in arr1.iter() {
             if map.contains_key(num) {
-                println!("KEY {}", *num);
                 map.entry(*num).and_modify(|e| *e += 1);
             } else {
                 excessive.push(*num);
@@ -45,7 +43,6 @@ impl Solution {
             result.append(&mut vector);
         }
         result.append(&mut excessive);
-        println!("{:?}", map);
         result
     }
 }
