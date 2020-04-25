@@ -26,10 +26,9 @@
 // All local and domain names are non-empty.
 // Local names do not start with a '+' character.
 
-use std::collections::HashSet;
-
 struct Solution;
 
+use std::collections::HashSet;
 impl Solution {
     pub fn num_unique_emails(emails: Vec<String>) -> i32 {
         let mut set: HashSet<String> = HashSet::new();
