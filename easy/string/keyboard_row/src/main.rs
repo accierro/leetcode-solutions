@@ -23,7 +23,6 @@ impl Solution {
             let mut valid = true;
             for ch in word.chars() {
                 let code = ch.to_ascii_lowercase() as u8 - 97;
-                println!("{} - {}", ch, code);
                 if num == 0 {
                     num = aplhabet[code as usize];
                 }
