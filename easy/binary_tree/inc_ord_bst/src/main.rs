@@ -60,9 +60,7 @@ struct Solution;
 
 impl Solution {
     pub fn increasing_bst(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
-        println!("{:?}", root);
         let values = Self::get_values(root);
-        println!("{:?}", values);
 
         let mut new_tree: Option<Rc<RefCell<TreeNode>>> = None;
         for num in values.iter().rev() {
