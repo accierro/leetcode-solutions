@@ -59,7 +59,6 @@ impl Solution {
                 }
             }
 
-            println!("{:b}", n);
             n >>= 1;
             i += 1;
         }
