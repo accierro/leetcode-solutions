@@ -30,8 +30,6 @@ impl Solution {
             .iter()
             .map(|e| Self::smallest_frequency(e))
             .collect();
-        println!("{:?}", queries_frequency);
-        println!("{:?}", frequency);
         queries_frequency
             .iter()
             .map(|e| match frequency.binary_search(e) {
