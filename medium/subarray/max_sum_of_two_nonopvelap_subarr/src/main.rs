@@ -31,15 +31,17 @@
 struct Solution;
 
 impl Solution {
-    pub fn max_sum_two_no_overlap(a: Vec<i32>, l: usize, m: usize) -> i32 {
+    pub fn max_sum_two_no_overlap(a: Vec<i32>, l: i32, m: i32) -> i32 {
+        let l: usize = l as usize;
+        let m: usize = m as usize;
         let mut sums = vec![0; a.len()];
         sums[0] = a[0];
         for n in 1..a.len() {
             sums[n] = sums[n - 1] + a[n];
         }
-        let mut res = sums[(l + m - 1) as usize];
-        let mut lmax = sums[(l - 1) as usize];
-        let mut mmax = sums[(m - 1) as usize];
+        let mut res = sums[(l + m - 1)];
+        let mut lmax = sums[(l - 1)];
+        let mut mmax = sums[(m - 1)];
         for i in (l + m)..a.len() {
             lmax = std::cmp::max(lmax, sums[i - m] - sums[i - l - m]);
             mmax = std::cmp::max(mmax, sums[i - l] - sums[i - l - m]);
